@@ -1,0 +1,26 @@
+Testing started at 13:45 ...
+Launching pytest with arguments C:\Users\Lenovo\PycharmProjects\pythonProject\test.py --no-header --no-summary -q in C:\Users\Lenovo\PycharmProjects\pythonProject
+
+============================= test session starts =============================
+collecting ... collected 10 items
+
+test.py::test_user_registration PASSED                                   [ 10%]User Jec Doe successfully registered.
+
+test.py::test_adding_product_to_cart PASSED                              [ 20%]
+test.py::test_adding_multiple_products PASSED                            [ 30%]
+test.py::test_order_checkout PASSED                                      [ 40%]Order 1 created and cart cleared.
+
+test.py::test_order_total_price PASSED                                   [ 50%]
+test.py::test_removing_product_from_cart PASSED                          [ 60%]
+test.py::test_order_item_total_price PASSED                              [ 70%]
+test.py::test_creating_multiple_orders PASSED                            [ 80%]Order 3 created and cart cleared.
+Order 4 created and cart cleared.
+
+test.py::test_checkout_with_empty_cart PASSED                            [ 90%]Cart is empty. Creating empty order.
+
+test.py::test_correct_product_in_order PASSED                            [100%]Order 6 created and cart cleared.
+
+
+============================= 10 passed in 0.04s ==============================
+
+Process finished with exit code 0
