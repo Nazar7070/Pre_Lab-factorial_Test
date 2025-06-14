@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Order #{{ index }}</h1>
+        <form method="post">
+            <label for="CPU">CPU:</label>
+            <select id="CPU" name="CPU" required>
+                {% for option in cpu_options %}
+                    <option value="{{ option }}" {% if current_parts.CPU == option %}selected{% endif %}>{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="RAM">RAM:</label>
+            <select id="RAM" name="RAM" required>
+                {% for option in ram_options %}
+                    <option value="{{ option }}" {% if current_parts.RAM == option %}selected{% endif %}>{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="Storage">Storage:</label>
+            <select id="Storage" name="Storage" required>
+                {% for option in storage_options %}
+                    <option value="{{ option }}" {% if current_parts.Storage == option %}selected{% endif %}>{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="GPU">GPU:</label>
+            <select id="GPU" name="GPU" required>
+                {% for option in gpu_options %}
+                    <option value="{{ option }}" {% if current_parts.GPU == option %}selected{% endif %}>{{ option }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Save</button>
+            <a href="{{ url_for('orders') }}">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

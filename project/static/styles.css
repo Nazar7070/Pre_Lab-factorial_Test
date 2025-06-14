@@ -1,0 +1,154 @@
+/* Загальні стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Форма */
+form {
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+select, button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 6px #2980b9;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Посилання */
+a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1c5980;
+}
+
+/* Список замовлень */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #ecf0f1;
+    margin-bottom: 12px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Кнопки Edit і Delete */
+li a, li form button {
+    margin-left: 12px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+li a {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+}
+
+li a:hover {
+    background-color: #2ecc71;
+}
+
+li form button {
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+}
+
+li form button:hover {
+    background-color: #c0392b;
+}
+
+/* Мобільна адаптивність */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li a, li form button {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+}

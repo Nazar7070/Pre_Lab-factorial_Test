@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Computer Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Computer Order</h1>
+        <form action="/create" method="post">
+            <label for="type">Choose type:</label>
+            <select name="type" id="type">
+                <option value="office">Office PC</option>
+                <option value="gaming">Gaming PC</option>
+                <option value="server">Server PC</option>
+            </select>
+            <button type="submit">Create</button>
+        </form>
+        <a href="{{ url_for('orders') }}">View All Orders</a>
+    </div>
+</body>
+</html>
